@@ -19,15 +19,15 @@ public class Hora {
 		hora += 1;
 	}
 	
-	public void diminuiSegundo(){
+	public void diminuirSegundo(){
 		segundo -= 1;
 	}
 	
-	public void diminuiMinuto(){
+	public void diminuirMinuto(){
 		minuto -= 1;
 	}
 	
-	public void diminuiHora(){
+	public void diminuirHora(){
 		hora -= 1;
 	}
 	
@@ -65,11 +65,11 @@ public class Hora {
 		}
 	}
 	
-	public void imprimiHoraLong(){
+	public void imprimirHoraLong(){
 		System.out.println( hora + ":" + minuto + ":" + segundo );
 	}
 	
-	public void imprimiHoraCurto(){
+	public void imprimirHoraCurto(){
 		System.out.println( hora + ":" + minuto );
 	}
 	
