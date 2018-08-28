@@ -1,0 +1,76 @@
+
+public class Hora {
+	
+	public int hora;
+	
+	public int minuto;
+	
+	public int segundo;
+	
+	public void aumentoSegundo(){
+		segundo += 1;
+	}
+	
+	public void aumentoMinuto(){
+		minuto += 1;
+	}
+	
+	public void aumentoHora(){
+		hora += 1;
+	}
+	
+	public void diminuiSegundo(){
+		segundo -= 1;
+	}
+	
+	public void diminuiMinuto(){
+		minuto -= 1;
+	}
+	
+	public void diminuiHora(){
+		hora -= 1;
+	}
+	
+	public void converterMinSeg(){
+		if(segundo == -1){
+			segundo = 59;
+			minuto -= 1; 
+		}
+	}
+	
+	public void converterHrMin(){
+		if(minuto == -1){
+			minuto = 59;
+			hora -= 1; 
+		}
+	}
+	
+	public void converterSegMin(){
+		if(segundo == 60){
+			segundo = 0;
+			minuto += 1; 
+		}
+	}
+	
+	public void converterMinHr(){
+		if(minuto == 60){
+			minuto = 0;
+			hora += 1; 
+		}
+	}
+	
+	public void resetHora(){
+		if(hora == 24){
+			hora = 0;
+		}
+	}
+	
+	public void imprimiHoraLong(){
+		System.out.println( hora + ":" + minuto + ":" + segundo );
+	}
+	
+	public void imprimiHoraCurto(){
+		System.out.println( hora + ":" + minuto );
+	}
+	
+}
