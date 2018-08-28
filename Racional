@@ -1,0 +1,48 @@
+public class Racional {
+
+	public int numerador;
+	public int denominador;
+
+	public void imprimirFracao() {
+		if (denominador == 1) {
+			System.out.println(numerador);
+		} else if (denominador == 0) {
+			System.out.println("Não é possível dividir um número por zero.");
+		} else {
+			System.out.println(numerador + "/" + denominador);
+		}
+	}
+
+	public void imprimirDecimal() {
+		System.out.println(numerador * 1.0 / denominador);
+	}
+
+	public void incrementar(Racional incremento) {
+		int novoNumerador = numerador * incremento.denominador + incremento.numerador * denominador;
+		int novoDenominador = denominador * incremento.denominador;
+		
+		numerador = novoNumerador;
+		denominador = novoDenominador;
+	}
+
+	public static void main(String[] args) {
+		Racional numeroLegal = new Racional();
+		numeroLegal.numerador = 3;
+		numeroLegal.denominador = 2;
+
+		Racional numeroBolado = new Racional();
+		numeroBolado.numerador = 1;
+		numeroBolado.denominador = 3;
+
+		numeroLegal.imprimirFracao();
+		numeroLegal.imprimirDecimal();
+
+		numeroBolado.imprimirFracao();
+		numeroBolado.imprimirDecimal();
+		
+		numeroLegal.incrementar(numeroBolado);
+		numeroLegal.imprimirFracao();
+		numeroBolado.imprimirFracao();
+	}
+
+}
